@@ -1,0 +1,7 @@
+﻿Name,Menge,Komponente
+"S1",1," Drucktaster"
+"DVorwärts",1,"Grün LED"
+"DRückwärts",1,"Weiß LED"
+"DFüllen",1,"Gelb LED"
+"RR_vorwärts, RR_rückwärts, RR_füllen",3,"220 Ω Widerstand"
+"RR_pull_up",1,"10 kΩ Widerstand"
