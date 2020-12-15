@@ -2,6 +2,7 @@
 #define MARKER_H
 
 #include <QThread>
+#include <QLCDNumber>
 
 class Marker
 {
@@ -10,15 +11,17 @@ private:
     int pin_number;
     // Marker count as position of the feeder
     int MARKER_COUNT = 0;
+    QLCDNumber* ui_lcd;
 
     // Thread where poll has to run
     std::thread RxThread;
 
     void infiniteRead();
+    bool istoggle(int, int);
 
 public:
-    Marker();
-    Marker(int gpio_pin);
+    Marker(QLCDNumber* lcd);
+    Marker(int gpio_pin, QLCDNumber* lcd);
 
     void init();
     int poll();

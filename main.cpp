@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-    Marker positionMarker = Marker(27);
+    Marker positionMarker = Marker(27, w.getLcd());
     positionMarker.init();
 
     return a.exec();

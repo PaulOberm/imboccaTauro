@@ -10,11 +10,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->lcdNumber->display(0);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+QLCDNumber* MainWindow::getLcd(){
+    // qDebug() << ui->lcdNumber;
+    QLCDNumber test;
+    return ui->lcdNumber;
 }
 
 bool checkOtherMotorDirection(int pin_value){
